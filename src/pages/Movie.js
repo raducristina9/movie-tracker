@@ -13,9 +13,10 @@ import {
 import { ChevronLeftIcon, AddIcon, CheckIcon } from '@chakra-ui/icons';
 import { useParams, useHistory } from 'react-router-dom';
 import useMovie from '../hooks/useMovie';
-import { buildImageUrl, imageFallback } from '../connectors/tmdb';
+import { buildImageUrl, buildImdbUrl, imageFallback } from '../connectors/tmdb';
 import { getYear, STATUS } from '../utils';
 import WatchlistButton from '../components/WatchlistButton';
+import HistoryButton from '../components/HistoryButton';
 
 export default function Movie() {
   const { movieId } = useParams();
@@ -57,13 +58,7 @@ export default function Movie() {
         />
         <HStack>
           <WatchlistButton movie={movie} status={updateStatus} update={updateMovie} />
-          <IconButton
-            aria-label={isHistoryActive ? 'Remove from history' : 'Mark as watched'}
-            icon={isHistoryActive ? <CheckIcon /> : <AddIcon />}
-            colorScheme="teal"
-            variant={isHistoryActive ? 'solid' : 'outline'}
-            onClick={() => setHistoryActive(a => !a)}
-          />
+          <HistoryButton movie={movie} status={updateStatus} update={updateMovie}/>
         </HStack>
       </HStack>
       <HStack spacing={3} align="flex-start">
@@ -84,6 +79,9 @@ export default function Movie() {
             </Text>
           </HStack>
           <Text>{movie.overview}</Text>
+          <Text>Movie rating: {movie.popularity}</Text>
+          <Text ><a href={buildImdbUrl(movie.imdb_id)} color="red">Link to imdb</a></Text>
+          <Text>Durata: {movie.runtime} de minute</Text>
         </Box>
       </HStack>
     </Container>

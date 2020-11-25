@@ -134,7 +134,7 @@ Acum să trecem la muncă. Am pregătit o listă cu sarcini, pentru fiecare sarc
 un punct. Cu 5 puncte primești badge, cu 10 deja ai punctaj maxim. cu 10+ vei fi lăudat de mentor,
 mândru de realizarea ta.
 
-1. Deschide `README.md` în VS Code. O să verzi sursa textului în format Markdown. E chiar simpatic,
+~~1. Deschide `README.md` în VS Code. O să verzi sursa textului în format Markdown. E chiar simpatic,
    dar dacă vrei să-l vezi ca și pe GitHub, apasă `Preview` din bara de sus. Acum, după ce ai
    completat un task, ~~✂️ îl tai de aici~~. Incepe cu acesta.
 
@@ -149,7 +149,7 @@ mândru de realizarea ta.
    implementat. Sarcina este să-l implementezi și pe-al doilea - adaugă în istoric, care la click,
    face un request către server, care va salva starea nouă în BD.
 5. Acum că avem funcționalitatea de a adăuga în istoric, să o îmbunătățim cu data când a fost
-   salvat. Și dacă utilizatorul a privit filmul în altă zi? Pentru asta mai adaugă și opțiunea de a
+   salvat. ~~ Și dacă utilizatorul a privit filmul în altă zi? Pentru asta mai adaugă și opțiunea de a
    schimba data. Oare putem privi un film care încă nu a fost lansat?
 6. Afișează istoricul în pagina corespunzătoare. Poți să te inspiri de la pagina de favorite, dar să
    modifici design-ul. Iar pentru sortare, ne vom folosi de data când a fost privit.
