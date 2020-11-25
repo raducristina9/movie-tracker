@@ -51,10 +51,12 @@ export default function Search() {
       )}
       {status === STATUS.RESOLVED && (
         <UnorderedList>
-          {data.results.map(({ id, title, release_date }) => (
+          {data.results.map(({ id, title, release_date,popularity }) => (
             <ListItem key={id}>
               <Link as={RouterLink} to={`/movies/${id}`}>
                 <Text as="span">{title} </Text>
+                <Text as="span">{popularity} </Text>
+                
                 <Text as="span" color="GrayText">
                   {getYear(release_date)}
                 </Text>

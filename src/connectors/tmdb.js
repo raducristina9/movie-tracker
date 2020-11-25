@@ -6,6 +6,7 @@ const buildUrl = (path, query = '') =>
   `https://api.themoviedb.org/3/${path}?api_key=${API_KEY}&${query}`;
 
 export const buildMovieUrl = movieId => buildUrl(`movie/${movieId}`);
+export const buildImdbUrl = imdb_id => `https://www.imdb.com/title/${imdb_id}`;
 export const buildSearchMovieUrl = terms => buildUrl('search/movie', `query=${terms}`);
 export const buildImageUrl = (path, size = 'original') =>
   `https://image.tmdb.org/t/p/${size}${path}`;
